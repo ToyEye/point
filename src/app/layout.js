@@ -1,5 +1,7 @@
 import { Montserrat } from "next/font/google";
+import "modern-normalize";
 
+import { Layout } from "@/components/Layout/Layout";
 import { Header } from "@/components/Header/Header";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -13,8 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <Header />
-        {children}
+        <Layout>
+          <Header />
+          {children}
+        </Layout>
       </body>
     </html>
   );
