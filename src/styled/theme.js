@@ -1,11 +1,11 @@
 export const lightTheme = {
   mainBgColor: "#dadada",
-  headerBgColor: "#a6e7f4",
+  headerBgColor: "#ffffff",
 
   mainTextColor: "",
 
-  linkColor: "",
-  linkHoverColor: "",
+  linkColor: "#534343",
+  linkHoverColor: "#8f3737",
 
   btnColor: "",
   btnHoverColor: "",

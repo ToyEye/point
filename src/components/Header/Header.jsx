@@ -14,7 +14,9 @@ export const Header = () => {
   return (
     <HeaderStyled>
       <Container>
-        <List list={nav} Component={ListLinkItem} className="headerList" />
+        <nav>
+          <List list={nav} Component={ListLinkItem} className="headerList" />
+        </nav>
       </Container>
     </HeaderStyled>
   );

@@ -1,10 +1,12 @@
 import React from "react";
-import Link from "next/link";
+import { LinkStyled } from "../reusable";
 
 export const ListLinkItem = ({ item }) => {
   return (
     <li>
-      <Link href={item.path}>{item.name}</Link>
+      <LinkStyled className="navLink" href={item.path}>
+        {item.name}
+      </LinkStyled>
     </li>
   );
 };

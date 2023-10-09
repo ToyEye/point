@@ -1,9 +1,9 @@
 "use client";
 
-import { GlobalStyled } from "@/app/styled/GlobalStyled";
+import { GlobalStyled } from "@/styled/GlobalStyled";
 import { ThemeProvider } from "styled-components";
 
-import { lightTheme } from "@/app/styled/theme";
+import { lightTheme } from "@/styled/theme";
 
 export const Layout = ({ children }) => {
   return (
