@@ -25,3 +25,19 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.btnsLink {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.05s ease;
+}
+
+.btnsLink:is(:hover, :focus) {
+  background: #00eeff;
+  border: 1px solid #00e1ff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #00e1ff, 0 0 20px #00e1ff, 0 0 50px #00e1ff,
+    0 0 100px #00e1ff;
+}
