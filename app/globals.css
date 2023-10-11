@@ -2,7 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer base {
+  :root {
+    --title-color: 0 0 0;
+    --primary-color: 0, 0, 0;
+
+    --link-primary-color: 0, 0, 0;
+    --link-secondary-color: 0, 0, 0;
+
+    --btn-primary-color:0 0 0
+    --btn-secondary-color: 0, 0, 0;
+
+    --background-main-color: 214, 219, 220;
+    --background-secondary-color: 255, 255, 255;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+    --title-color: 255 255 255;
+    --primary-color: 0, 0, 0;
+
+    --link-primary-color: 0, 0, 0;
+    --link-secondary-color: 0, 0, 0;
+
+    --btn-primary-color:0 0 0
+    --btn-secondary-color: 0, 0, 0;
+
+    --background-main-color: 0 0 0;
+    --background-secondary-color: 255, 255, 255;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --title-color: 0 0 0;
+    --primary-color: 0, 0, 0;
+
+    --link-primary-color: 0, 0, 0;
+    --link-secondary-color: 0, 0, 0;
+
+    --btn-primary-color:0 0 0
+    --btn-secondary-color: 0, 0, 0;
+
+    --background-main-color: 214, 219, 220;
+    --background-secondary-color: 255, 255, 255;
+  }
+
+  :root[data-theme="light"] {
+    --title-color: 0 0 0;
+    --primary-color: 0, 0, 0;
+
+    --link-primary-color: 0, 0, 0;
+    --link-secondary-color: 0, 0, 0;
+
+    --btn-primary-color:0 0 0
+    --btn-secondary-color: 0, 0, 0;
+
+    --background-main-color: 214, 219, 220;
+    --background-secondary-color: 255, 255, 255;
+  }
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -10,20 +70,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--title-color));
+  background: rgb(var(--background-main-color))
 }
 
 .btnsLink {

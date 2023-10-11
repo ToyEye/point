@@ -11,9 +11,15 @@ const About = () => {
           width={600}
           height={400}
         /> */}
-        <div className="flex gap-4">
-          <div className="block w-[400px] h-[600px] bg-slate-50"> </div>
-          <p className="w-[768px]">
+
+        <div className="flex gap-4 flex-col lg:flex-row">
+          <img
+            src="https://placehold.co/400x600/jpg"
+            alt="c"
+            className="w-[400px] h-[600px] m-auto"
+          />
+          {/* <div className="block w-[400px] h-[600px] bg-slate-50"> </div> */}
+          <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
             molestias voluptates porro aliquam quaerat saepe est blanditiis
             adipisci minima. Vero minus ipsum nemo doloribus incidunt, quia enim
