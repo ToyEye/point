@@ -3,6 +3,8 @@ import Slider from "./Slider";
 
 const catImages = {
   title: "Appartments",
+  propjectDescrL:
+    ' "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus molestias voluptates porro aliquam quaerat saepe est blanditiis adipisci minima. Vero minus ipsum nemo doloribus incidunt, quia enim facilis, illum dolorum libero a reprehenderit temporibus ad maximeesse at aliquam error, ex itaque fugit! Recusandae voluptatemtempore enim, doloremque quia hic atque dolorum ad, iusto animiconsequatur architecto, minima inventore commodi ullam error iureillum? Iure, cum, consequatur nisi officia doloremque magnidignissimos fugit numquam, non illum quisquam reiciendis enim.",',
   images: [
     {
       id: 1,
@@ -47,6 +49,7 @@ const Gallery = () => {
     <section>
       <div className="container">
         <h1>{catImages.title}</h1>
+        <p>{catImages.propjectDescrL}</p>
         <Slider data={catImages.images} />
         <Slider data={catImages.images} />
         <Slider data={catImages.images} />

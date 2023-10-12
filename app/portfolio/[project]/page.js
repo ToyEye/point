@@ -41,9 +41,9 @@ const catImages = [
 
 const ProjectPage = ({ params }) => {
   return (
-    <div>
+    <>
       <AboutProject data={catImages} />
-    </div>
+    </>
   );
 };
 
