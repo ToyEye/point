@@ -3,11 +3,15 @@ import React from "react";
 import Gallery from "@/components/Gallery";
 import PortfolioHero from "@/components/PortfolioHero";
 
-const PortfolioPage = () => {
+import { getData } from "@/helpers/getApi";
+
+const PortfolioPage = async () => {
+  const { data } = await getData();
+
   return (
     <div>
       <PortfolioHero />
-      <Gallery />
+      <Gallery data={data} />
     </div>
   );
 };

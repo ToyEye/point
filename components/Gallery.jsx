@@ -44,10 +44,20 @@ const catImages = {
   ],
 };
 
-const Gallery = () => {
+const Gallery = ({ data }) => {
   return (
     <section>
       <div className="container">
+        {data?.map(({ id, attributes }) => {
+          console.log(attributes.images.data);
+          return (
+            <div key={id}>
+              <h2>{attributes.title}</h2>
+              <Slider data={attributes.images.data} />;
+            </div>
+          );
+        })}
+
         <h1>{catImages.title}</h1>
         <p>{catImages.propjectDescrL}</p>
         <Slider data={catImages.images} />
