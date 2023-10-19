@@ -3,10 +3,10 @@ import React from "react";
 import Gallery from "@/components/Gallery";
 import PortfolioHero from "@/components/PortfolioHero";
 
-import { getData } from "@/helpers/getApi";
+import { getProjects } from "@/sanity/sanity-utils";
 
 const PortfolioPage = async () => {
-  const { data } = await getData();
+  const data = await getProjects();
 
   return (
     <div>

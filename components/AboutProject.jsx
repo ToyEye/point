@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 function AboutProjec({ data }) {
@@ -5,10 +6,11 @@ function AboutProjec({ data }) {
     <section>
       <div className="container">
         <ul>
-          {data.map(({ id, imageUrl, fullDesc, description }) => (
-            <li key={id}>
-              <img src={imageUrl} alt={description} className="w-[400px]" />
-              <p>{fullDesc}</p>
+          {data.map(({ imageUrl, imageAlt, desc, name }) => (
+            <li key={name}>
+              <Image src={imageUrl} alt={imageAlt} width={300} height={400} />
+              <p>{name}</p>
+              <p>{desc}</p>
             </li>
           ))}
         </ul>

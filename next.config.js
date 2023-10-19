@@ -2,6 +2,16 @@
 const dns = require("dns");
 
 dns.setDefaultResultOrder("ipv4first");
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+      },
+    ],
+  },
+};
 
 module.exports = nextConfig;
