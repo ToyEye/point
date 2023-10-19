@@ -24,6 +24,7 @@ export async function getProject(slug) {
       _id,
       _createdAt,
       project,
+      description,
       "slug": slug.current,
       data[]{
         name,

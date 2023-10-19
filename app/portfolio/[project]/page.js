@@ -5,8 +5,18 @@ import { getProject } from "@/sanity/sanity-utils";
 const ProjectPage = async ({ params }) => {
   const slug = params.project;
   const project = await getProject(slug);
-  console.log(project);
-  return <>{<AboutProject data={project.data} title={project.project} />}</>;
+
+  return (
+    <>
+      {
+        <AboutProject
+          data={project.data}
+          title={project.project}
+          description={project.description}
+        />
+      }
+    </>
+  );
 };
 
 export default ProjectPage;
