@@ -1,6 +1,6 @@
 import React from "react";
 
-import Gallery from "@/components/Gallery";
+import Projects from "@/components/Project/Projects";
 import PortfolioHero from "@/components/PortfolioHero";
 
 import { getProjects } from "@/sanity/sanity-utils";
@@ -11,7 +11,7 @@ const PortfolioPage = async () => {
   return (
     <div>
       <PortfolioHero />
-      <Gallery data={data} />
+      <Projects data={data} />
     </div>
   );
 };
