@@ -36,3 +36,15 @@ export async function getProject(slug) {
     { slug }
   );
 }
+
+export async function getGallary() {
+  return createClient(config).fetch(
+    groq`*[_type == "gallery"]{
+      _id,
+      _createdAt,
+      name,
+      withProject,
+      "photo": photo.asset->url,
+    }`
+  );
+}

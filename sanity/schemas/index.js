@@ -1,5 +1,6 @@
 import project from "./projectSchema";
+import images from "./imagesSchema";
 
-const schemas = [project];
+const schemas = [project, images];
 
 export default schemas;
