@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,8 +12,19 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import Link from "next/link";
 import Heading from "./Heading";
+import Modal from "./Modal";
 
 const Slider = ({ data }) => {
+  const [isModalShow, setIsModalShow] = useState(null);
+
+  const handleOnClick = (modalData) => {
+    setIsModalShow(modalData);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalShow(null);
+  };
+
   return (
     <Swiper
       slidesPerView={1}
@@ -23,7 +34,6 @@ const Slider = ({ data }) => {
         delay: 1500,
         disableOnInteraction: false,
       }}
-      loop={true}
       breakpoints={{
         768: {
           slidesPerView: 2,
@@ -32,10 +42,15 @@ const Slider = ({ data }) => {
           slidesPerView: 4,
         },
       }}
+      loop={true}
     >
       {data?.map(({ _id, photo, name, withProject }) => {
         return (
-          <SwiperSlide key={_id}>
+          <SwiperSlide
+            key={_id}
+            className="cursor-pointer "
+            onClick={() => handleOnClick({ photo, name })}
+          >
             {/* <Image
                 src={photo}
                 alt={name}
@@ -50,6 +65,7 @@ const Slider = ({ data }) => {
               height={400}
               className="mb-4"
             />
+
             <Link
               href={`/portfolio/${withProject}`}
               className="mx-auto block border w-1/2 text-center rounded-md py-2"
@@ -59,6 +75,10 @@ const Slider = ({ data }) => {
           </SwiperSlide>
         );
       })}
+
+      {isModalShow && (
+        <Modal modalData={isModalShow} handleCloseModal={handleCloseModal} />
+      )}
     </Swiper>
   );
 };
