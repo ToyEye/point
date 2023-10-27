@@ -48,3 +48,13 @@ export async function getGallary() {
     }`
   );
 }
+
+export async function getPrices() {
+  return createClient(config).fetch(
+    groq`*[_type == "price"]{
+      _id,
+      name,
+      price,
+      description}`
+  );
+}

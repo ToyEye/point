@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { useRouter } from "next/navigation";
+import React, { useEffect } from "react";
 import { GrClose } from "react-icons/gr";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 import { routes } from "@/routes";
 import { useState } from "react";
 import MobileMenu from "../MobileMenu";
+import Checkbox from "../Checkbox";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -27,23 +28,11 @@ const Header = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   const showMenu = () => {
-  //     setShowMenu(!showMenu);
-  //   };
-
-  //   router.events.on("routeChangeStart", showMenu);
-
-  //   return () => {
-  //     router.events.off("routeChangeStart", showMenu);
-  //   };
-  // }, [router.events]);
-
   return (
-    <header>
-      <div className="container flex items-center justify-between py-2 md:block">
-        <nav className="flex items-center justify-between">
-          <Link href="/" className="transition hover:text-red-500">
+    <header className="bg-headerBgColor ">
+      <div className="container flex items-center justify-between py-2">
+        <nav className="flex items-center justify-between gap-32">
+          <Link href="/" className="logo transition hover:text-red-500 ">
             LOGO
           </Link>
           <ul className="hidden md:flex gap-5 justify-center ">
@@ -59,6 +48,7 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+        <Checkbox />
         <button
           type="button"
           className="z-10  md:hidden"

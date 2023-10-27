@@ -34,6 +34,9 @@ module.exports = {
         gray: "#484848",
         headerBorderDark: "rgba(18, 18, 18, 0.3)",
         headerBorderLight: "rgba(247, 247, 247, 0.2)",
+
+        headerBgColor: "rgb(var(--background-header-color) / <alpha-value>)",
+        footerBgColor: "rgb(var(--background-footer-color) / <alpha-value>)",
       },
     },
   },

@@ -27,7 +27,7 @@ const iconList = [
 
 const Footer = () => {
   return (
-    <footer className="py-8">
+    <footer className="py-8 bg-footerBgColor">
       <div className="container">
         <div className="flex items-baseline  justify-between">
           <div className="text-sm lg:text-base ">

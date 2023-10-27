@@ -13,13 +13,18 @@
     --btn-primary-color:0 0 0
     --btn-secondary-color: 0, 0, 0;
 
-    --background-main-color: 214, 219, 220;
-    --background-secondary-color: 255, 255, 255;
+    --background-main-color: 255 255 255;
+
+    --background-header-color: 7 107 129;
+    --background-footer-color: 7 107 129;
+
+
+
   }
 
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     :root {
-    --title-color: 255 255 255;
+    --title-color: 0 0 0;
     --primary-color: 0, 0, 0;
 
     --link-primary-color: 0, 0, 0;
@@ -28,10 +33,13 @@
     --btn-primary-color:0 0 0
     --btn-secondary-color: 0, 0, 0;
 
-    --background-main-color: 0 0 0;
-    --background-secondary-color: 255, 255, 255;
+    --background-main-color: 255 255 255;
+
+    --background-header-color: 7 107 129;
+    --background-footer-color: 7 107 129;
+
     }
-  }
+  } */
 
   :root[data-theme="dark"] {
     --title-color: 0 0 0;
@@ -43,8 +51,11 @@
     --btn-primary-color:0 0 0
     --btn-secondary-color: 0, 0, 0;
 
-    --background-main-color: 214, 219, 220;
-    --background-secondary-color: 255, 255, 255;
+    --background-main-color: 0 0 0;
+
+    --background-header-color: 255 255 255;
+    --background-footer-color: 255 255 255;
+
   }
 
   :root[data-theme="light"] {
@@ -57,8 +68,11 @@
     --btn-primary-color:0 0 0
     --btn-secondary-color: 0, 0, 0;
 
-    --background-main-color: 214, 219, 220;
-    --background-secondary-color: 255, 255, 255;
+    --background-main-color: 255 255 255;
+
+    --background-header-color: 7 107 129;
+    --background-footer-color: 7 107 129;
+
   }
 }
 
@@ -95,4 +109,28 @@ body {
   text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
   box-shadow: 0 0 5px #00e1ff, 0 0 20px #00e1ff, 0 0 50px #00e1ff,
     0 0 100px #00e1ff;
+}
+
+main .form-page{
+   height: calc(100vh - 72px - 145px);
+}
+
+
+.logo {
+  font-size: 24px; /* Задайте потрібний розмір тексту */
+  text-decoration: none;
+  color: black; /* Задайте потрібний колір тексту */
+  transition: all 0.3s ease; /* Додамо плавну анімацію при зміні тіні */
+  animation: pulse 1.5s infinite; /* Додаємо мерехтливу анімацію */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); /* Початкова і кінцева тінь */
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.7); /* Початкова і кінцева тінь для тексту */
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0); /* Проміжна тінь (без тіні) */
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7); /* Проміжна тінь для тексту */
+  }
 }

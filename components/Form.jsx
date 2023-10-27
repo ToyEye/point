@@ -5,7 +5,7 @@ import { Formik } from "formik";
 
 const Form = () => {
   return (
-    <section>
+    <section className="form-page flex items-center">
       <div className="container">
         <h1 className=" text-xl  text-center mb-6">Make your order</h1>
         <Formik
@@ -52,8 +52,8 @@ const Form = () => {
                 placeholder="Enter Your number"
               />
               {errors.number && touched.number && errors.number}
-              <input
-                className="py-3 pl-2 rounded-md"
+              <textarea
+                className="py-3 pl-2 rounded-md h-[170px] resize-none"
                 type="text"
                 name="text"
                 onChange={handleChange}

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const HomeHero = () => {
   return (
-    <section className="py-4 md:py-8 lg:py-20 ">
+    <section className="py-6 md:py-10 lg:py-20 ">
       <div className="container">
         <h1 className="text-center mb-10">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
