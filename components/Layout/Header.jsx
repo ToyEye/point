@@ -33,7 +33,7 @@ const Header = () => {
       <div className="container flex items-center justify-between py-2">
         <nav className="flex items-center justify-between gap-32">
           <Link href="/" className="logo transition hover:text-red-500 ">
-            LOGO
+            Litvinova .point
           </Link>
           <ul className="hidden md:flex gap-5 justify-center ">
             {routes.map(({ id, name, path }) => (
