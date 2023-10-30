@@ -57,7 +57,7 @@ const Slider = ({ data }) => {
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 75vw, 50vw"
               /> */}
-            <Heading tag="h2" text={name} className="text-center mb-3" />
+
             <img
               src={photo}
               alt={name}

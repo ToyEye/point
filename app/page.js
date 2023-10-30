@@ -1,7 +1,7 @@
-import HomeHero from "@/components/HomeHero";
-import About from "@/components/About";
-import Gallery from "@/components/Gallery";
-import Cards from "@/components/Cards";
+import HomeHero from "@/components/HomeComponents/HomeHero";
+import About from "@/components/HomeComponents/About";
+import Gallery from "@/components/HomeComponents/Gallery/Gallery";
+import Cards from "@/components/HomeComponents/Cards";
 
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+
 import React, { useEffect } from "react";
 import { GrClose } from "react-icons/gr";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -13,7 +13,6 @@ import Checkbox from "../Checkbox";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const router = useRouter();
 
   const handleShowMeni = () => {
     setShowMenu(!showMenu);
@@ -48,7 +47,7 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <Checkbox />
+        {/* <Checkbox /> */}
         <button
           type="button"
           className="z-10  md:hidden"
