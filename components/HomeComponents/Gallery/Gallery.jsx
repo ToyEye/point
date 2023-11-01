@@ -12,8 +12,12 @@ const Gallery = async () => {
   return (
     <section>
       <div className="container">
-        <Heading tag="h2" text="Gallery" className="text-center mb-3" />
-        <ul>
+        <Heading
+          tag="h2"
+          text="Gallery"
+          className=" text-white text-center mb-3 text-2xl font-bold md:text-3xl md:mb-8 lg:text-5xl lg:mb-12 "
+        />
+        <ul className="grid gap-4 mb-4 md:grid-cols-2 md:mb-8 lg:mb-12">
           {gallery?.map((el) => (
             <GalleryItem key={el._id} item={el} />
           ))}

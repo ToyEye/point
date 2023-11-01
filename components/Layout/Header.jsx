@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     <header className="bg-headerBgColor ">
-      <div className="container flex items-center justify-between py-2">
+      <div className="container flex md:block items-center justify-between py-2 text-white">
         <nav className="flex items-center justify-between gap-32">
           <Link href="/" className=" transition hover:text-red-500 ">
             Litvinova .point
