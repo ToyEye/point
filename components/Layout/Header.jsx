@@ -9,11 +9,14 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { routes } from "@/routes";
 import { useState } from "react";
 import MobileMenu from "../MobileMenu";
+import { usePathname } from "next/navigation";
 import Checkbox from "../Checkbox";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [path, setPath] = useState("");
 
+  const pathname = usePathname();
   const handleShowMeni = () => {
     setShowMenu(!showMenu);
   };
@@ -25,7 +28,15 @@ const Header = () => {
       }
       setShowMenu(false);
     });
-  }, []);
+
+    if (path !== pathname) {
+      setShowMenu(false);
+    }
+  }, [path, pathname]);
+
+  useEffect(() => {
+    setPath(pathname);
+  }, [pathname]);
 
   return (
     <header className="bg-headerBgColor ">
@@ -40,6 +51,7 @@ const Header = () => {
                 <Link
                   href={path}
                   className="block py-4 transition hover:text-red-500"
+                  onClick={handleShowMeni}
                 >
                   {name}
                 </Link>
