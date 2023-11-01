@@ -4,7 +4,9 @@ import Link from "next/link";
 
 const HomeHero = () => {
   return (
-    <section className="py-6 md:py-10 lg:py-20 ">
+    <section className="py-6 mx-auto md:py-20  lg:py-40 max-w-[1340px]  relative">
+      <div className="bg-cover bg-center bg-[url('/img/hero-back.jpg')] bg-no-repeat absolute top-0 left-0 h-full w-full -z-[2]"></div>
+      <div className="absolute top-0 left-0 bg-gradient-to-r from-slate-700 to-slate-700 h-full w-full -z-[1] opacity-50 "></div>
       <div className="container">
         <h1 className="text-center mb-10">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,

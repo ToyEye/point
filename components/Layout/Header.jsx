@@ -17,6 +17,7 @@ const Header = () => {
   const [path, setPath] = useState("");
 
   const pathname = usePathname();
+
   const handleShowMeni = () => {
     setShowMenu(!showMenu);
   };
@@ -29,7 +30,7 @@ const Header = () => {
       setShowMenu(false);
     });
 
-    if (path !== pathname) {
+    if (path === pathname) {
       setShowMenu(false);
     }
   }, [path, pathname]);
@@ -42,7 +43,7 @@ const Header = () => {
     <header className="bg-headerBgColor ">
       <div className="container flex items-center justify-between py-2">
         <nav className="flex items-center justify-between gap-32">
-          <Link href="/" className="logo transition hover:text-red-500 ">
+          <Link href="/" className=" transition hover:text-red-500 ">
             Litvinova .point
           </Link>
           <ul className="hidden md:flex gap-5 justify-center ">
@@ -51,7 +52,6 @@ const Header = () => {
                 <Link
                   href={path}
                   className="block py-4 transition hover:text-red-500"
-                  onClick={handleShowMeni}
                 >
                   {name}
                 </Link>
