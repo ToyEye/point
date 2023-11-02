@@ -2,14 +2,20 @@
 
 import React from "react";
 import { Formik } from "formik";
+import Heading from "./reusable/Heading";
 
 const Form = () => {
   return (
     <section className="form-page flex items-center">
       <div className="container">
-        <h1 className=" text-xl  text-center mb-6">Make your order</h1>
+        <Heading
+          text="Contact me"
+          tag="h1"
+          className="mb-8 text-xl text-light  text-center font-semibold leading-6 "
+        />
+
         <Formik
-          initialValues={{ email: "", number: "", text: "" }}
+          initialValues={{ name: "", email: "", number: "", text: "" }}
           onSubmit={(values, { setSubmitting }) => {
             console.log(values);
             setTimeout(() => {
@@ -31,6 +37,17 @@ const Form = () => {
               onSubmit={handleSubmit}
               className="flex flex-col gap-4 m-auto md:w-[380px] text-slate-900  "
             >
+              <input
+                className="py-3 pl-2 rounded-md"
+                type="text"
+                name="name"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.name}
+                placeholder="Enter Your name"
+                required
+              />
+              {errors.name && touched.name && errors.name}
               <input
                 className="py-3 pl-2 rounded-md"
                 type="email"
@@ -62,7 +79,11 @@ const Form = () => {
                 placeholder="Enter Your text"
               />
               {errors.text && touched.text && errors.text}
-              <button type="submit" disabled={isSubmitting}>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="mx-auto block py-[10px] w-full  text-center text-light  px-5 rounded-md bg-bgBtn hover:bg-bgBtnHover focus:bg-bgBtnHover transition"
+              >
                 Submit
               </button>
             </form>
