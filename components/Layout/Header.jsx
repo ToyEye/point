@@ -45,7 +45,7 @@ const Header = () => {
         <nav className="flex items-center justify-between gap-32">
           <Link
             href="/"
-            className=" transition hover:text-[#333333] focus:text-[#333333]  "
+            className=" transition hover:text-[#333333] focus:text-[#333333]"
           >
             Litvinova .point
           </Link>
@@ -54,7 +54,7 @@ const Header = () => {
               <li key={id}>
                 <Link
                   href={path}
-                  className="block py-4 transition hover:text-[#333333] focus:text-[#333333] "
+                  className="block py-4 transition hover:text-[#333333] focus:text-[#333333]"
                 >
                   {name}
                 </Link>
