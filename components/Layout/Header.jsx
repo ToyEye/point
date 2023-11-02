@@ -43,7 +43,10 @@ const Header = () => {
     <header className="bg-headerBgColor ">
       <div className="container flex md:block items-center justify-between py-2 text-white">
         <nav className="flex items-center justify-between gap-32">
-          <Link href="/" className=" transition hover:text-red-500 ">
+          <Link
+            href="/"
+            className=" transition hover:text-[#333333] focus:text-[#333333]  "
+          >
             Litvinova .point
           </Link>
           <ul className="hidden md:flex gap-5 justify-center ">
@@ -51,7 +54,7 @@ const Header = () => {
               <li key={id}>
                 <Link
                   href={path}
-                  className="block py-4 transition hover:text-red-500"
+                  className="block py-4 transition hover:text-[#333333] focus:text-[#333333] "
                 >
                   {name}
                 </Link>

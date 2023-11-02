@@ -3,10 +3,11 @@ import React from "react";
 
 import Heading from "./reusable/Heading";
 import Description from "./reusable/Description";
+import LinkLikeBtn from "./reusable/LinkLikeBtn";
 
 function AboutProjec({ data, title, description }) {
   return (
-    <section>
+    <section className="py-6 md:py-14 lg:py-28 text-light">
       <div className="container">
         <Heading
           text={title}
@@ -17,9 +18,15 @@ function AboutProjec({ data, title, description }) {
           {data.map(({ imageUrl, imageAlt, desc, name }) => (
             <li
               key={name}
-              className="flex flex-col gap-5 border rounded py-4 px-4 md:flex-row "
+              className="flex flex-col gap-5 border rounded py-4 px-4 lg:flex-row "
             >
-              <Image src={imageUrl} alt={imageAlt} width={300} height={400} />
+              <Image
+                src={imageUrl}
+                alt={imageAlt}
+                width={500}
+                height={400}
+                className="w-full"
+              />
               <div>
                 <Description
                   text={name}
@@ -30,7 +37,12 @@ function AboutProjec({ data, title, description }) {
             </li>
           ))}
         </ul>
-        <p>{description}</p>
+        <p className="mb-6 px-5 text-sm md:text-base">{description}</p>
+        <LinkLikeBtn
+          text="Contact me"
+          path="/portfolio"
+          classNames="w-3/4 md:w-1/3 "
+        />
       </div>
     </section>
   );
