@@ -1,10 +1,5 @@
 export const routes = [
-  { id: "1", name: "Home", path: "/" },
-  { id: "2", name: "Portfolio", path: "/portfolio" },
-  { id: "3", name: "Contacts us", path: "/contact" },
+  { id: "1", name: "Home", path: "/", label: "Home page" },
+  { id: "2", name: "Portfolio", path: "/portfolio", label: "Portfolio page" },
+  { id: "3", name: "Contacts us", path: "/contact", label: "contact page" },
 ];
-
-const result = routes.reduce((obj, route) => {
-  obj[route.name.toUpperCase()] = route.path;
-  return obj;
-}, {});

@@ -46,15 +46,17 @@ const Header = () => {
           <Link
             href="/"
             className=" transition hover:text-[#333333] focus:text-[#333333]"
+            aria-label="Logo. Link to home Page"
           >
             Litvinova .point
           </Link>
           <ul className="hidden md:flex gap-5 justify-center ">
-            {routes.map(({ id, name, path }) => (
+            {routes.map(({ id, name, path, label }) => (
               <li key={id}>
                 <Link
                   href={path}
                   className="block py-4 transition hover:text-[#333333] focus:text-[#333333]"
+                  aria-label={label}
                 >
                   {name}
                 </Link>
@@ -67,6 +69,7 @@ const Header = () => {
           type="button"
           className="z-30  md:hidden"
           onClick={handleShowMeni}
+          aria-label="Open mobile menu"
         >
           {showMenu ? <GrClose size={22} /> : <RxHamburgerMenu size={22} />}
         </button>

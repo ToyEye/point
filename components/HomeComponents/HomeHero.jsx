@@ -18,10 +18,18 @@ const HomeHero = () => {
         </p>
         <ul className="flex justify-center gap-12">
           <li>
-            <LinkLikeBtn path="/portfolio" text="Portfolio" />
+            <LinkLikeBtn
+              path="/portfolio"
+              text="Portfolio"
+              label="Portfolio page"
+            />
           </li>
           <li>
-            <LinkLikeBtn path="/contact" text="Contact us" />
+            <LinkLikeBtn
+              path="/contact"
+              text="Contact us"
+              label="Contact page"
+            />
           </li>
         </ul>
       </div>

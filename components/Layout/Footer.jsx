@@ -39,11 +39,12 @@ const Footer = () => {
           </div>
           <nav>
             <ul className="flex gap-2 flex-col justify-center text-xs md:text-sm lg:text-base">
-              {routes.map(({ id, name, path }) => (
+              {routes.map(({ id, name, path, label }) => (
                 <li key={id}>
                   <Link
                     href={path}
                     className="text-light font-semibold hover:text-[#333333] focus:text-[#333333] transition "
+                    aria-label={label}
                   >
                     {name}
                   </Link>

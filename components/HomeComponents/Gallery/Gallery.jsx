@@ -23,7 +23,8 @@ const Gallery = async () => {
         <LinkLikeBtn
           path="/portfolio"
           text=" Look projects"
-          classNames="w-3/4 md:w-1/3 "
+          classNames="w-3/4 md:w-1/3"
+          label="Portfolio page"
         />
       </div>
     </section>

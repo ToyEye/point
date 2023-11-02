@@ -25,6 +25,7 @@ const Project = ({ title, data, slug }) => {
         text="View this ptoject"
         path={`/portfolio/${slug}`}
         classNames="w-3/4 md:w-1/3 "
+        label={`Project page ${slug}`}
       />
     </li>
   );

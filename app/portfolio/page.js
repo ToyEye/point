@@ -9,10 +9,10 @@ const PortfolioPage = async () => {
   const data = await getProjects();
 
   return (
-    <div>
+    <>
       <PortfolioHero />
       <Projects data={data} />
-    </div>
+    </>
   );
 };
 

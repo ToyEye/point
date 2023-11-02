@@ -40,8 +40,9 @@ function AboutProjec({ data, title, description }) {
         <p className="mb-6 px-5 text-sm md:text-base">{description}</p>
         <LinkLikeBtn
           text="Contact me"
-          path="/portfolio"
+          path="/contact"
           classNames="w-3/4 md:w-1/3 "
+          label="Portfolio page"
         />
       </div>
     </section>

@@ -83,6 +83,7 @@ const Form = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className="mx-auto block py-[10px] w-full  text-center text-light  px-5 rounded-md bg-bgBtn hover:bg-bgBtnHover focus:bg-bgBtnHover transition"
+                aria-label="Submit form"
               >
                 Submit
               </button>

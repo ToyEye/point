@@ -13,6 +13,7 @@ const Card = ({ card: { name, price, description } }) => {
           text="Go to form"
           path="/contact"
           classNames="hover:scale-90 duration-500"
+          label="Contact page"
         />
       </div>
     </li>
