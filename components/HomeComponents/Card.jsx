@@ -1,5 +1,4 @@
-import React from "react";
-import Link from "next/link";
+import LinkLikeBtn from "../reusable/LinkLikeBtn";
 
 const Card = ({ card: { name, price, description } }) => {
   return (
@@ -10,12 +9,11 @@ const Card = ({ card: { name, price, description } }) => {
       </p>
       <p className="text-sm leading-7 text-dark space-y-4">{description}</p>
       <div className=" flex justify-center mt-auto">
-        <Link
-          href="/contact"
-          className="flex items-center justify-center w-36 h-10 font-semibold rounded-md bg-bgBtn text-light hover:scale-90 duration-500"
-        >
-          Go to form
-        </Link>
+        <LinkLikeBtn
+          text="Go to form"
+          path="/contact"
+          classNames="hover:scale-90 duration-500"
+        />
       </div>
     </li>
   );

@@ -11,8 +11,8 @@ import "swiper/css/pagination";
 
 import Image from "next/image";
 import Link from "next/link";
-import Heading from "./Heading";
-import Modal from "./Modal";
+import Heading from "./reusable/Heading";
+import Modal from "./reusable/Modal";
 
 const Slider = ({ data }) => {
   const [isModalShow, setIsModalShow] = useState(null);

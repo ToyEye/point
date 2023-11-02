@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
-import Heading from "./Heading";
-import Description from "./Description";
+import Heading from "./reusable/Heading";
+import Description from "./reusable/Description";
 
 function AboutProjec({ data, title, description }) {
   return (

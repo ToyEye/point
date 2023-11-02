@@ -1,8 +1,6 @@
-import React from "react";
-import Link from "next/link";
-
 import { getGallary } from "@/sanity/sanity-utils";
-import Heading from "@/components/Heading";
+import Heading from "@/components/reusable/Heading";
+import LinkLikeBtn from "@/components/reusable/LinkLikeBtn";
 
 import GalleryItem from "./GalleryItem";
 
@@ -22,12 +20,11 @@ const Gallery = async () => {
             <GalleryItem key={el._id} item={el} />
           ))}
         </ul>
-        <Link
-          href={`/portfolio`}
-          className="mx-auto block py-[10px] w-3/4 text-center text-light md:w-1/3  px-5 rounded-md bg-bgBtn hover:bg-bgBtnHover focus:bg-bgBtnHover transition"
-        >
-          Look projects
-        </Link>
+        <LinkLikeBtn
+          path="/portfolio"
+          text=" Look projects"
+          classNames="w-3/4 md:w-1/3 "
+        />
       </div>
     </section>
   );

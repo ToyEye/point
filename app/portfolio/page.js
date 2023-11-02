@@ -1,7 +1,7 @@
 import React from "react";
 
-import Projects from "@/components/Project/Projects";
-import PortfolioHero from "@/components/PortfolioHero";
+import Projects from "@/components/PortfolioComponents/Project/Projects";
+import PortfolioHero from "@/components/PortfolioComponents/PortfolioHero";
 
 import { getProjects } from "@/sanity/sanity-utils";
 

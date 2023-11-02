@@ -1,6 +1,4 @@
-import React from "react";
-
-import Link from "next/link";
+import LinkLikeBtn from "../reusable/LinkLikeBtn";
 
 const HomeHero = () => {
   return (
@@ -20,20 +18,10 @@ const HomeHero = () => {
         </p>
         <ul className="flex justify-center gap-12">
           <li>
-            <Link
-              href="/portfolio"
-              className=" block py-[10px] px-5 rounded-md bg-bgBtn hover:bg-bgBtnHover focus:bg-bgBtnHover transition  "
-            >
-              Portfolio
-            </Link>
+            <LinkLikeBtn path="/portfolio" text="Portfolio" />
           </li>
           <li>
-            <Link
-              href="/contact"
-              className="block py-[10px] px-5 rounded-md bg-bgBtn hover:bg-bgBtnHover focus:bg-bgBtnHover transition  "
-            >
-              Contact us
-            </Link>
+            <LinkLikeBtn path="/contact" text="Contact us" />
           </li>
         </ul>
       </div>

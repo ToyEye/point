@@ -8,7 +8,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 import { routes } from "@/routes";
 import { useState } from "react";
-import MobileMenu from "../MobileMenu";
+import MobileMenu from "../PortfolioComponents/MobileMenu";
 import { usePathname } from "next/navigation";
 import Checkbox from "../Checkbox";
 

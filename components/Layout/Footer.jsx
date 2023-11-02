@@ -5,6 +5,7 @@ import { GoMail } from "react-icons/go";
 
 import { routes } from "@/routes";
 import Link from "next/link";
+import Description from "../reusable/Description";
 
 const iconList = [
   { id: "1", path: "mailto:litvinovaalina1992@gmail.com", Icon: GoMail },
@@ -31,11 +32,10 @@ const Footer = () => {
       <div className="container">
         <div className="flex items-baseline  justify-between">
           <div className="text-sm text-light lg:text-base ">
-            <p>
-              Lo<span>go</span>
-            </p>
-            <p>Phone number:</p>
-            <p>+38 (044) 335 69 88</p>
+            <Description text="Logo" />
+
+            <Description text="Phone number:" />
+            <Description text="+38 (044) 335 69 88" />
           </div>
           <nav>
             <ul className="flex gap-2 flex-col justify-center text-xs md:text-sm lg:text-base">
