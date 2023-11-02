@@ -8,7 +8,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 import { routes } from "@/routes";
 import { useState } from "react";
-import MobileMenu from "../PortfolioComponents/MobileMenu";
+import MobileMenu from "../reusable/MobileMenu";
 import { usePathname } from "next/navigation";
 import Checkbox from "../Checkbox";
 
@@ -62,7 +62,7 @@ const Header = () => {
         {/* <Checkbox /> */}
         <button
           type="button"
-          className="z-10  md:hidden"
+          className="z-30  md:hidden"
           onClick={handleShowMeni}
         >
           {showMenu ? <GrClose size={22} /> : <RxHamburgerMenu size={22} />}

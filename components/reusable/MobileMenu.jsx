@@ -8,7 +8,7 @@ const MobileMenu = ({ routes, showMenu }) => {
 
   return (
     <div
-      className={`fixed top-0 -left-full  w-full h-full bg-slate-100 transition ${isShow} `}
+      className={`fixed top-0 -left-full z-20  w-full h-full bg-slate-100 transition ${isShow} `}
     >
       <ul className="flex flex-col gap-5 justify-center items-center pt-[200px] ">
         {routes.map(({ id, name, path }) => (
