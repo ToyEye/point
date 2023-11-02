@@ -38,6 +38,9 @@ module.exports = {
 
         headerBgColor: "rgb(var(--background-header-color) / <alpha-value>)",
         footerBgColor: "rgb(var(--background-footer-color) / <alpha-value>)",
+
+        bgBtn: "rgb(var(--background-btn-color) / <alpha-value>)",
+        bgBtnHover: "rgb(var(--background-btn-color-hover) / <alpha-value>)",
       },
     },
   },

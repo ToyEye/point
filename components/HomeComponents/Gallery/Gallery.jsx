@@ -24,7 +24,7 @@ const Gallery = async () => {
         </ul>
         <Link
           href={`/portfolio`}
-          className="mx-auto block border w-1/2 text-center rounded-md py-2"
+          className="mx-auto block py-[10px] w-3/4 text-center text-light md:w-1/3  px-5 rounded-md bg-bgBtn hover:bg-bgBtnHover focus:bg-bgBtnHover transition"
         >
           Look projects
         </Link>

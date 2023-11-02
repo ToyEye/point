@@ -30,29 +30,36 @@ const Footer = () => {
     <footer className="py-8 bg-footerBgColor">
       <div className="container">
         <div className="flex items-baseline  justify-between">
-          <div className="text-sm lg:text-base ">
+          <div className="text-sm text-light lg:text-base ">
             <p>
               Lo<span>go</span>
             </p>
-            <p>Phone number</p>
+            <p>Phone number:</p>
             <p>+38 (044) 335 69 88</p>
           </div>
           <nav>
             <ul className="flex gap-2 flex-col justify-center text-xs md:text-sm lg:text-base">
               {routes.map(({ id, name, path }) => (
                 <li key={id}>
-                  <Link href={path} className="">
+                  <Link
+                    href={path}
+                    className="text-light font-semibold hover:text-[#333333] focus:text-[#333333] transition "
+                  >
                     {name}
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <ul className="flex gap-4">
+          <ul className="flex flex-col md:flex-row gap-2 md:gap-4">
             {iconList.map(({ id, path, Icon }) => (
               <li key={id}>
-                <a href={path} target="_blank noreferrer">
-                  <Icon className="w-[15px] h-[15px] md:w-[20px] md:h-[20px]" />
+                <a
+                  href={path}
+                  target="_blank noreferrer"
+                  className="flex justify-center items-center text-light hover:scale-150 hover:bg-light  hover:text-bgBtn rounded  transition  w-[20px] h-[20px] md:w-[26px] md:h-[26px] lg:w-[30px] lg:h-[30px]"
+                >
+                  <Icon className="lg:w-[26px] lg:h-[26px]" />
                 </a>
               </li>
             ))}

@@ -19,7 +19,7 @@ const About = () => {
             className="w-[400px] h-[600px] m-auto"
           />
           {/* <div className="block w-[400px] h-[600px] bg-slate-50"> </div> */}
-          <p className="leading-6 text-white tracking-wide ">
+          <p className="text-sm  leading-2 md:text-base  lg:leading-6 text-white tracking-wide ">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
             molestias voluptates porro aliquam quaerat saepe est blanditiis
             adipisci minima. Vero minus ipsum nemo doloribus incidunt, quia enim
